@@ -14,5 +14,5 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const makeOrder = (orderData) => API.post(`/`, orderData);
+export const makeOrder = (orderData) => API.post(``, orderData);
 export const getAllOrdersOfUser = (id) => API.get(`/getByCustomer/${id}`);
