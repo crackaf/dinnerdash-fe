@@ -1,6 +1,7 @@
 import axios from "axios";
+import { SERVER_URL } from "../api";
 
-const API = axios.create({ baseURL: "http://localhost:8080/api/customers" });
+const API = axios.create({ baseURL: SERVER_URL + "/api/customers" });
 
 API.interceptors.request.use((req) => {
   console.log("here worling");

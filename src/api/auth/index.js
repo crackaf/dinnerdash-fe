@@ -1,6 +1,7 @@
 import axios from "axios";
+import { SERVER_URL } from "../api";
 
-const API = axios.create({ baseURL: "http://localhost:8080/api/auth" });
+const API = axios.create({ baseURL: SERVER_URL+"/api/auth" });
 
 API.interceptors.request.use((req) => {
   console.log("here worling");
