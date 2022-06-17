@@ -1,0 +1,68 @@
+$spaces: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36,
+  38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76,
+  78, 80, 96, 120, 150, 230;
+
+@each $space in $spaces {
+  // margins
+  .dd-mt-#{$space} {
+    margin-top: $space + px;
+  }
+  .dd-mr-#{$space} {
+    margin-right: $space + px;
+  }
+  .dd-mb-#{$space} {
+    margin-bottom: $space + px;
+  }
+  .dd-ml-#{$space} {
+    margin-left: $space + px;
+  }
+  .dd-mx-#{$space} {
+    margin-left: $space + px;
+    margin-right: $space + px;
+  }
+  .dd-my-#{$space} {
+    margin-top: $space + px;
+    margin-bottom: $space + px;
+  }
+  .dd-m-#{$space} {
+    margin: $space + px;
+  }
+  // paddings
+  .dd-pt-#{$space} {
+    padding-top: $space + px;
+  }
+  .dd-pr-#{$space} {
+    padding-right: $space + px;
+  }
+  .dd-pb-#{$space} {
+    padding-bottom: $space + px;
+  }
+  .dd-pl-#{$space} {
+    padding-left: $space + px;
+  }
+  .dd-px-#{$space} {
+    padding-left: $space + px;
+    padding-right: $space + px;
+  }
+  .dd-py-#{$space} {
+    padding-top: $space + px;
+    padding-bottom: $space + px;
+  }
+  .dd-p-#{$space} {
+    padding: $space + px;
+  }
+}
+.row {
+  --bs-gutter-x: 40px !important;
+
+  &-gutter-20 {
+    --bs-gutter-x: 20px !important;
+  }
+  &-gutter-30 {
+    --bs-gutter-x: 30px !important;
+  }
+  &-grid {
+    --bs-gutter-y: clamp(1rem, -0.7rem + 2.6667vw, 2.5rem) !important;
+    --bs-gutter-x: clamp(1rem, -0.7rem + 2.6667vw, 2.5rem) !important;
+  }
+}

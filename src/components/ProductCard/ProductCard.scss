@@ -1,0 +1,52 @@
+@import "../../assets/css/mixins";
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-4px);
+        // box-shadow: 0px 35px 58px -26px rgba(0, 0, 0, 0.75);
+    }
+    &-wrapper{
+        &-1{
+            background-image: url(../../assets/images/card-out-1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-bottom: 6px;
+            padding-right: 4px;
+            padding-left: 3px;
+            min-height: 210px;
+            min-width: 210px;
+
+        }
+        &-2{
+            background-image: url(../../assets/images/card-out-2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-right: 8px;
+            padding-top: 8px;
+            padding-left: 5px;
+            img{
+                border-radius: 70px 20px 65px 55px;
+                // max-width: 300px;
+                aspect-ratio: 1 / 1;
+                // height: 90%;
+                // width: 90%;
+            }
+
+        }
+    }
+    &-name{
+        @include fontStyle($size: 22px, $lineHeight: 1, $color: var(--color-black-2), $family: var(--Poppins-Medium))
+    }
+    &-price {
+        @include fontStyle($size: 18px, $lineHeight: 1, $color: #909090, $family: var(--Poppins-Medium))
+    }
+    &-stars{
+      
+    }
+}

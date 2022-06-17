@@ -1,0 +1,73 @@
+@mixin fontStyle(
+  $family: var(--Roboto_Regular),
+  $size: 16px,
+  $weight: normal,
+  $style: normal,
+  $lineHeight: 1,
+  $color: var(--regular-gray-text-color)
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+// media queries
+$xSmall: 575px;
+$small: 576px;
+$medium: 768px;
+$large: 991px;
+$ipad: 1024px;
+$xLarge: 1200px;
+$xxLarge: 1600px;
+$xxxLarge: 1800px;
+
+@mixin xSmall($minmax) {
+  @media (#{$minmax}: #{$xSmall}) {
+    @content;
+  }
+}
+@mixin small($minmax) {
+  @media (#{$minmax}: #{$small}) {
+    @content;
+  }
+}
+@mixin medium($minmax) {
+  @media (#{$minmax}: #{$medium}) {
+    @content;
+  }
+}
+@mixin large($minmax) {
+  @media (#{$minmax}: #{$large}) {
+    @content;
+  }
+}
+@mixin ipad($minmax) {
+  @media (#{$minmax}: #{$ipad}) {
+    @content;
+  }
+}
+@mixin xLarge($minmax) {
+  @media (#{$minmax}: #{$xLarge}) {
+    @content;
+  }
+}
+@mixin xxLarge($minmax) {
+  @media (#{$minmax}: #{$xxLarge}) {
+    @content;
+  }
+}
+
+@mixin cardHover {
+  transition: all 0.2s;
+  &:hover {
+    .collection-card__media-in-progress > img {
+      mix-blend-mode: unset;
+    }
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+  }
+}

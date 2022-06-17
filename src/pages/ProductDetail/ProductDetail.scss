@@ -1,0 +1,75 @@
+@import "../../assets/css/mixins";
+
+.product-detail{
+    &-wrapper{
+        // background-color: #FFF9F3;
+        margin-block: 50px;
+    }
+    &__image{
+        background-color: #FFF9F3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        img{
+
+            max-width: 460px;
+            border-radius: 8px;
+        }
+    }
+    &__detail{
+        padding: 25px;
+        background-color: #FFF9F3;
+        border-radius: 6px;
+        &-name{
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--color-light-orange);
+        }
+        &-options{
+            padding-block: 20px;
+            border-bottom: 2px solid var(--color-light-orange);
+            
+        }
+        &-price{
+            padding-block: 20px;
+            border-bottom: 2px solid var(--color-light-orange);
+             &-1{
+                 padding-right: 12px;
+
+                border-right: 2px solid var(--color-light-orange);
+             }   
+        }
+        &-quantity{
+            // display: flex;
+            // justify-content: center;
+            padding-block: 20px;
+            &-status{
+                margin-inline: auto;
+                width: 80%;
+            }
+            .quantity-picker{
+                border: 2px solid var(--color-orange);
+                width: 80%;
+                margin-inline: auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            .quantity-modifier{
+                height: 48px;
+                color: black;
+                background-color: var(--color-light-orange);
+            }
+            .quantity-display{
+                background-color: #FFF9F3;
+            }
+            &-status{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+    }
+
+
+
+}

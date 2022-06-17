@@ -1,0 +1,63 @@
+@import "../../assets/css/mixins";
+
+
+.primary-btn{
+    border: none;
+    @include fontStyle($family: var(--Poppins-Light), $size: 20px, $lineHeight: 1);
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-radius: 30px;
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+    transition: all 0.4s;
+    &::after{
+        transition: all 0.4s;
+        content: "";
+        display: inline-block;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        border-radius: 30px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+       
+    }
+    &:hover{
+        transform: translateY(-3px);
+        &::after{
+                // z-index: 1;
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+    }
+    
+
+    &.btn-green{
+        background-color: var(--color-green);
+        color: white;
+        &::after{
+            background-color: var(--color-green);
+        }
+    
+    }
+    &.btn-orange {
+        background-color: var(--color-orange);
+        color: white;
+        &::after {
+            background-color: var(--color-orange);
+        }
+
+    }
+    &.btn-lessRounded{
+        border-radius: 14px;
+        &::after {
+        border-radius: 14px;
+        }
+    }
+    &.btn-wide{
+        width: 80%;
+        
+    }
+}

@@ -1,0 +1,52 @@
+@import "../../assets/css/mixins";
+
+.dd-navbar{
+    .dd-popover{
+        h3{
+            font-size: 24px;
+
+        }
+        .popover-body{
+            font-size: 18px;
+            strong{
+                font-size: 18px;
+            }
+        }
+    }
+    .user-img{
+        max-height: 50px;
+        margin-left: 10px;
+    }
+    background-color: #FFF9F3;
+    a,button{
+        font-size: 26px;
+        font-family: var(--Poppins-Light);
+        line-height: 1;
+
+    }
+    .nav-link, .nav-item{
+        color: black !important;
+        transition: all 0.2s;
+        &:hover{
+            transform: translateY(-1px);
+            font-weight: bold;
+            // box-shadow: 1px 36px 30px 5px rgba(87, 87, 87, 0.10);
+
+        }
+    }
+ 
+
+    .navbar-brand{
+        color: black;
+        font-size: 30px;
+        // font-family: var(--Poppins-Regular);
+        font-family: var(--Poppins-Regular);
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 8px;
+        }
+    }
+
+}

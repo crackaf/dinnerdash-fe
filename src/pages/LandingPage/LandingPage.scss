@@ -1,0 +1,12 @@
+@import "../../assets/css/mixins";
+
+.landing-page{
+    .first-section{
+        background-color: #FFF9F3;
+        &-heading{
+            padding-top: 70px;
+
+        }
+    }
+}
+

@@ -1,0 +1,70 @@
+@import "../../assets/css/mixins";
+
+.cart{
+    &-wrapper{
+        margin-block: 50px;
+    }
+    &-payment{
+        background-color: #FFF9F3 ;
+        .nav-tabs{
+            // padding-block: 16px;
+        }
+        .nav-item{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            .nav-link{
+                background-color: transparent;
+                padding-block: 16px;
+                border: none;
+                border-bottom: 2px solid var(--color-light-orange);
+                // border: none;
+                height: 100%;
+                width: 100%;
+                outline: none;
+                @include fontStyle($family: var(--Poppins-Medium),
+                $size: 22px,
+                $weight: 500,
+                $lineHeight: 49px,
+                $color: var(--black));
+                &.active{
+                    font-weight: bold;
+                    background-color: #FFF9F3;
+                    color: black;
+                border-bottom: 2px solid var(--color-orange);
+
+                }
+            }
+        }
+        .tab-content{
+            padding: 30px;
+            
+            h3{
+                padding-bottom: 30px;
+                border-bottom: 2px solid var(--color-light-orange);
+            }
+        }
+        &__orders{
+            padding-top: 30px;
+            & > div{
+                margin-bottom: 30px;
+            }
+
+        }
+        &__order{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-name{
+                img{
+                    max-width: 160px;
+                    height: 150px;
+                    // object-fit: cover;
+                    aspect-ratio: 1 / 1;
+
+                }
+            }
+        }
+    }
+}
