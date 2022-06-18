@@ -193,7 +193,6 @@ const Cart = () => {
           const orderData = {
             order: {
               restaurantId: restId,
-              orderTime: new Date(),
               paymentMethod: "Wallet",
               orderStatus: "Pending",
             },
